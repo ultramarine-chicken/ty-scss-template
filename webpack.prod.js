@@ -2,6 +2,9 @@ const common = require('./webpack.common.js');
 const { merge } = require('webpack-merge');
 
 module.exports = merge(common, {
-    mode: 'prod',
-    cache: false
+    mode: 'production',
+    cache: false,
+    output: {
+        filename: 'bundle.min.js'
+    }
 })

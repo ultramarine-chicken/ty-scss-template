@@ -3,6 +3,10 @@ const { merge } = require('webpack-merge');
 
 module.exports = merge(common, {
     mode: 'development',
-    devtool: 'inline-source-map',
-    cache: true
+    devtool: 'source-map',
+    cache: true,
+
+    output: {
+        filename: 'bundle.js',
+    }
 })
